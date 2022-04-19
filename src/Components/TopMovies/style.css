@@ -78,11 +78,11 @@
   opacity: 1;
 }
 
-.top-rated-sec .movies-grid{
+.movies-grid{
   justify-content: space-around;
 }
 
-.top-rated-sec .movies-grid .single-movie{
+.movies-grid .single-movie{
   width: 23%;
   min-width: 290px;
   margin: 0 1% 4rem;
