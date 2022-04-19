@@ -1,6 +1,7 @@
 /* Home Banner Design */
 .home-header {
   background: url(./homeBanner.jpg) no-repeat center center fixed;
+  background-size: cover;
   min-height: 115vh;
   display: flex;
   justify-content: flex-start;
