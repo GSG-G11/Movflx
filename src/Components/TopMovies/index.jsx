@@ -1,4 +1,5 @@
 import React from 'react';
+import MovieCard from '../MovieCard';
 import './style.css';
 
 const TopMovies = ({ filterCtg, setFilterCtg, topMovies }) => {
@@ -34,12 +35,12 @@ const TopMovies = ({ filterCtg, setFilterCtg, topMovies }) => {
           </button>
           <button
             className={
-              filterCtg === 'Romance'
+              filterCtg === 'Western'
                 ? 'btn category-btn active'
                 : 'btn category-btn'
             }
             onClick={(e) => handleFilterCtg(e)}>
-            Romance
+            Western
           </button>
           <button
             className={
@@ -51,12 +52,12 @@ const TopMovies = ({ filterCtg, setFilterCtg, topMovies }) => {
             Horror
           </button>
         </div>
-        <div className='row'>
+        <div className='row movies-grid'>
           {
           topMovies
           ?
           topMovies.map(movie => (
-            <h1>{movie.Title}</h1>
+            <MovieCard movie={movie} key={movie.imdbID} />
           ))
           :
           null

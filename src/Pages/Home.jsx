@@ -3,7 +3,7 @@ import HomeBanner from '../Components/HomeBanner';
 import TopMovies from '../Components/TopMovies';
 
 const Home = () => {
-  const [filterCtg, setFilterCtg] = useState('Romance');
+  const [filterCtg, setFilterCtg] = useState('Action');
   const [topMovies, setTopMovies] = useState([]);
 
   useEffect(() => {

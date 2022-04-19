@@ -77,3 +77,13 @@
   background-color: #e4d804;
   opacity: 1;
 }
+
+.top-rated-sec .movies-grid{
+  justify-content: space-around;
+}
+
+.top-rated-sec .movies-grid .single-movie{
+  width: 23%;
+  min-width: 290px;
+  margin: 0 1% 4rem;
+}
