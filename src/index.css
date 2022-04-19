@@ -36,3 +36,6 @@ input, .input, textarea, .textarea {
   justify-content: space-between;
   align-items: center;
 }
+.page-header{
+  padding-top: 100px;
+}
