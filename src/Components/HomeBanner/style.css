@@ -1,1 +1,65 @@
 /* Home Banner Design */
+.home-header {
+  background: url(./homeBanner.jpg) no-repeat center center fixed;
+  min-height: 115vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-header .banner-content{
+  max-width: 600px;
+  margin-bottom: 6rem;
+}
+
+.home-header .sub-title{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e4d804;
+}
+
+.home-header .title{
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 29px;
+  color: #fff;
+}
+
+.home-header .title span{
+  color: #e4d804;
+}
+
+.home-header .btn{
+  user-select: none;
+  -moz-user-select: none;
+  background: #12151e none repeat scroll 0 0;
+  border: 2px solid #e4d804;
+  border-radius: 50px;
+  color: #e3dfdf;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 16px 34px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transition: all 0.3s ease 0s;
+  white-space: nowrap;
+  max-width: 220px;
+}
+
+.home-header .btn i{
+  font-weight: normal;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.home-header .btn:hover{
+  background: #e4d804;
+  color: #1e1b29;
+}
