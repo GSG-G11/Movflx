@@ -1,1 +1,89 @@
 /* Top Movies Design */
+.new-sec {
+  padding: 5rem 0;
+}
+.top-rated-sec {
+  background: url(./background.jpg) no-repeat center center fixed;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.section-title .sub-title {
+  line-height: 1;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  color: #e4d804;
+}
+.section-title .title {
+  color: #fff;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: no;
+  font-size: 2.1rem;
+}
+.top-rated-sec .categories-btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.categories-btns .btn {
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0px 3px 7px 0px rgb(0 0 0 / 77%);
+  background: #0b1110;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #cdcaca;
+  padding: 17px 25px;
+  position: relative;
+  margin: 0 7.5px 15px;
+  transition: all .5s;
+}
+
+.categories-btns .btn::before,
+.categories-btns .btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 16px;
+  transition: 0.3s linear;
+  opacity: 0;
+}
+
+.categories-btns .btn::after{
+  left: auto;
+  right: 0;
+}
+
+.categories-btns .btn.active {
+  text-shadow: 0px 3px 24px rgb(228 216 4 / 50%);
+  color: #e4d804;
+}
+
+.categories-btns .btn.active::before,
+.categories-btns .btn.active::after {
+  background-color: #e4d804;
+  opacity: 1;
+}
+
+.top-rated-sec .movies-grid{
+  justify-content: space-around;
+}
+
+.top-rated-sec .movies-grid .single-movie{
+  width: 23%;
+  min-width: 290px;
+  margin: 0 1% 4rem;
+}

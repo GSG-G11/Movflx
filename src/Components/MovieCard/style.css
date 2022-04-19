@@ -1,0 +1,62 @@
+/* Movie Card Design */
+.single-movie{
+  margin-bottom: 3rem;
+}
+
+.single-movie .movie-poster {
+  width: 100%;
+  height: 435px;
+  margin-bottom: 1rem;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.movie-content {
+  padding: 0 .5rem;
+}
+
+.movie-content .top {
+  margin-bottom: 1rem;
+}
+
+.movie-content .top .title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.movie-content .top .title .link{
+  color: #fff;
+  transition: all .5s;
+}
+.movie-content .top .title .link:hover{
+  color: #e4d804;
+}
+
+.movie-content .top .year {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 1rem;
+  color: #e4d804;
+}
+
+.movie-content .bottom .quality,
+.movie-content .bottom .type {
+  border: 2px solid #fff;
+    padding: 5px 10px;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #e4d804;
+}
+
+.movie-content .bottom .type{
+  border-color: transparent;
+}
