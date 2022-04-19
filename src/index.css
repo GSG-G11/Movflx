@@ -22,6 +22,8 @@ input, .input, textarea, .textarea {
   display: inline-block;
   border: none;
   outline: none;
+}
+button, .btn, a, .link {
   cursor: pointer;
 }
 .container {

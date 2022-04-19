@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.png';
 import './style.css';
 
-const Navbar = () => {
+const Navbar = ({setShowSearch}) => {
   const [sticky, setSticky] = useState(false);
   const [responsive, setResponsive] = useState(false);
   const [showSide, setShowSide] = useState(false);
@@ -38,6 +38,22 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   });
+
+  useEffect(() => {
+    if(showSide) {
+      document.body.style = 'overflow: hidden';
+    }
+
+    return () => {
+      document.body.style = 'overflow: auto';
+    }
+  }, [showSide]);
+
+  const handleShowSearch = () => {
+    console.log('clicked')
+    setShowSide(false);
+    setShowSearch(true);
+  }
 
   return (
     <nav className={sticky ? 'navbar sticky' : 'navbar'}>
@@ -81,9 +97,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className='navbar-item'>
-              <Link className='navbar-link' to='/search'>
+              <button className='navbar-link btn' onClick={() => handleShowSearch()}>
                 Search
-              </Link>
+              </button>
             </li>
           </ul>
             {responsive ? (

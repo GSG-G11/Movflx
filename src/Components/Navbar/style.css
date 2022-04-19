@@ -111,6 +111,7 @@
   color: #FFF;
   letter-spacing: .5px;
   transition: all .5s;
+  background-color: transparent;
 }
 
 .navbar-menu.sidebar .navbar-item{
