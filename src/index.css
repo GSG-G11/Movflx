@@ -6,23 +6,33 @@
   font-family: 'Poppins', sans-serif;
 }
 body {
-  min-height: 100vh;
+  min-height: 150vh;
   background: #1B252E;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 a, .link{
   text-decoration: none;
   color: #FFF;
+  cursor: pointer;
 }
 button, .btn,
 input, .input, textarea, .textarea {
   display: inline-block;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .container {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
