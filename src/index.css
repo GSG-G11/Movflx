@@ -41,3 +41,31 @@ button, .btn, a, .link {
 .page-header{
   padding-top: 100px;
 }
+
+/* not found  */
+.notFound{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 80vw;
+  padding-top: 150px;
+  margin: auto;
+}
+.notFound h2{
+  color: #FFF;
+}
+.imgNotFound {
+  width: 50%;
+  margin-bottom: 1em;
+  margin-bottom: 2rem;
+}
+.backToHome {
+  color: #fff;
+  background-color: #e4d804;
+  border: 1px solid #e4d804;
+  padding: 0.7em 1.5em;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
