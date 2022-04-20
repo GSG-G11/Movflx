@@ -8,26 +8,26 @@ import Subscribe from '../Components/Subscribe';
 const SearchPage = () => {
   const { query } = useParams();
   const [searchResults, setSearchResults] = useState([]);
-  const [totalPages, setTotalPages] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [totalPages, setTotalPages] = useState(0);
+  // const [currentPage, setCurrentPage] = useState(1);
 
   console.log(query);
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
-    fetch(`https://omdbapi.com/?apikey=7b85d604&s=${query}&page=${currentPage}`, {
+    fetch(`https://omdbapi.com/?apikey=7b85d604&s=${query}`, {
       signal: signal
     })
     .then(res => res.json())
     .then(data => {
-      setTotalPages(data.totalResults / 10);
+      // setTotalPages(data.totalResults / 10);
       setSearchResults(data.Search ? data.Search.filter(movie => movie.Poster !== 'N/A').slice(0, 8) : []);
     })
 
     return () => {
       controller.abort();
     }
-  }, [query, currentPage]);
+  }, [query]);
 
   return (
     <>
