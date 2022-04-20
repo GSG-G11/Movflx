@@ -19,6 +19,9 @@
 .movie-content {
   padding: 0 .5rem;
 }
+.movie-content .row{
+  justify-content: space-between;
+}
 
 .movie-content .top {
   margin-bottom: 1rem;
@@ -59,4 +62,5 @@
 
 .movie-content .bottom .type{
   border-color: transparent;
+  padding-right: 0;
 }

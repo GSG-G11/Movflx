@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import HomeBanner from '../Components/HomeBanner';
+import Subscribe from '../Components/Subscribe';
 import TopMovies from '../Components/TopMovies';
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
     <>
       <HomeBanner />
       <TopMovies filterCtg={filterCtg} setFilterCtg={setFilterCtg} topMovies={topMovies} />
+      <Subscribe />
     </>
   )
 }

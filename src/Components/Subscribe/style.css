@@ -1,1 +1,82 @@
 /* Subscribe Design */
+.subscribe-sec{
+  background: url(./background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  padding: 3rem 0;
+}
+.subscribe-sec .row > div{
+  width: 50%;
+  padding: 0 2rem;
+}
+.subscribe-content .title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #171d22;
+  margin-bottom: 0;
+}
+.subscribe-content .desc{
+  font-size: .9rem;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 0;
+    color: #171d22;
+}
+.subscribe-form form {
+  position: relative;
+  max-width: 500px;
+}
+.subscribe-form form input{
+  width: 100%;
+  border: 2px solid #faf9f7;
+  background: #fff;
+  box-shadow: 0px 3px 4px 0px rgb(30 30 30 / 17%);
+  padding: 17px 25px;
+  padding-right: 215px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.subscribe-form form button {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 4px;
+  background: #171d22;
+  border: 2px solid  #171d22;
+  color: #e4d804;
+  font-size: 1rem;
+  padding: 15px 34px;
+  text-transform: uppercase;
+  transition: all .5s;
+}
+.subscribe-form form button:hover{
+  background: #e4d804;
+  color: #171d22;
+}
+
+@media (max-width: 1050px) {
+  .subscribe-content .title{
+    font-size: 1.5rem;
+  }
+  .subscribe-form form input {
+    padding: 17px 30px;
+    padding-right: 30px;
+}
+  .subscribe-form form button {
+    position: initial;
+    margin-top: 15px;
+}
+}
+
+@media (max-width: 1050px) {
+  .subscribe-sec .row{
+    flex-direction: column;
+  }
+  .subscribe-sec .row > div{
+    width: 100%;
+    text-align: center;
+  }
+  .subscribe-form form{
+    margin: 2rem auto 0;
+  }
+}

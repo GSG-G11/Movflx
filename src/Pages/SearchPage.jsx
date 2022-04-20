@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MovieCard from '../Components/MovieCard';
+import Subscribe from '../Components/Subscribe';
 
 const SearchPage = () => {
   const { query } = useParams();
@@ -32,19 +33,22 @@ const SearchPage = () => {
           Header
         </div>
       </header>
-      <div className="container">
-        <div className='row movies-grid'>
-          {
-          searchResults.length
-          ?
-          searchResults.map(movie => (
-            <MovieCard movie={movie} key={movie.imdbID} />
-          ))
-          :
-          <h2>No results found</h2>
-          }
+      <section className="results-sec">
+        <div className="container">
+          <div className='row movies-grid'>
+            {
+            searchResults.length
+            ?
+            searchResults.map(movie => (
+              <MovieCard movie={movie} key={movie.imdbID} />
+            ))
+            :
+            <h2>No results found</h2>
+            }
+          </div>
         </div>
-      </div>
+      </section>
+      <Subscribe />
     </>
   )
 }

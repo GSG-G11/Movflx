@@ -82,7 +82,7 @@ const Navbar = ({setShowSearch}) => {
               </Link>
             </li>
             <li className='navbar-item'>
-              <Link className='navbar-link' to='/#Movies'>
+              <Link className='navbar-link' to='/#movies'>
                 Movies
               </Link>
             </li>
