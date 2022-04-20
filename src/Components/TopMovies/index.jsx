@@ -2,7 +2,7 @@ import React from 'react';
 import MovieCard from '../MovieCard';
 import './style.css';
 
-const TopMovies = ({ filterCtg, setFilterCtg, topMovies }) => {
+const TopMovies = ({ filterCtg, setFilterCtg, topMovies, setWatchList,watchList }) => {
   const handleFilterCtg = (e) => {
     setFilterCtg(e.target.textContent);
   };
@@ -57,7 +57,7 @@ const TopMovies = ({ filterCtg, setFilterCtg, topMovies }) => {
           topMovies
           ?
           topMovies.map(movie => (
-            <MovieCard movie={movie} key={movie.imdbID} />
+            <MovieCard movie={movie} key={movie.imdbID} setWatchList={setWatchList} watchList={watchList} />
           ))
           :
           null

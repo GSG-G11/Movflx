@@ -6,7 +6,7 @@ import NoData from '../Components/Search/noData';
 import Subscribe from '../Components/Subscribe';
 import Pagination from '../Components/Pagination';
 
-const SearchPage = ({currentPage, setCurrentPage}) => {
+const SearchPage = ({currentPage, setCurrentPage, setWatchList, watchList }) => {
   const { query } = useParams();
   const [searchResults, setSearchResults] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
@@ -47,7 +47,7 @@ const SearchPage = ({currentPage, setCurrentPage}) => {
           <div className='row movies-grid'>
             {searchResults.length ? (
               searchResults.map((movie) => (
-                <MovieCard movie={movie} key={movie.imdbID} />
+                <MovieCard movie={movie} key={movie.imdbID} setWatchList={setWatchList} watchList={watchList} />
               ))
             ) : (
               <NoData />

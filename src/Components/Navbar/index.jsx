@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.png';
 import './style.css';
 
-const Navbar = ({setShowSearch}) => {
+const Navbar = ({setShowSearch, watchList}) => {
   const [sticky, setSticky] = useState(false);
   const [responsive, setResponsive] = useState(false);
   const [showSide, setShowSide] = useState(false);
@@ -76,22 +76,25 @@ const Navbar = ({setShowSearch}) => {
               null
             }
             <li className='navbar-item'>
-              <Link className='navbar-link' to='/'>
+              <Link className='navbar-link' to='/' onClick={() => setShowSide((prev) => false)}>
                 Home
               </Link>
             </li>
             <li className='navbar-item'>
-              <Link className='navbar-link' to='/#movies'>
+              <Link className='navbar-link' to='/#movies' onClick={() => setShowSide((prev) => false)}>
                 Movies
               </Link>
             </li>
-            {/* <li className='navbar-item'>
-              <Link className='navbar-link' to='/Favourites'>
-                Favourites
-              </Link>
-            </li> */}
             <li className='navbar-item'>
-              <Link className='navbar-link' to='/#Subscribe'>
+              <Link className='navbar-link favourites' to='/favourites' onClick={() => setShowSide((prev) => false)}>
+                Favourites
+                {
+                  watchList.length ? <span className='num'>{watchList.length}</span> : null
+                }
+              </Link>
+            </li>
+            <li className='navbar-item'>
+              <Link className='navbar-link' to='/#Subscribe' onClick={() => setShowSide((prev) => false)}>
                 Subscribe
               </Link>
             </li>

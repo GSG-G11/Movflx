@@ -50,7 +50,7 @@ button, .btn, a, .link {
   align-content: center;
   width: 80vw;
   padding-top: 150px;
-  margin: auto;
+  margin: 0 auto 5rem;
 }
 .notFound h2{
   color: #FFF;
