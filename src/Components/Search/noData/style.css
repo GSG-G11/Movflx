@@ -1,0 +1,22 @@
+/* style */
+.empty-movie{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.empty-movie img{
+    width: 80%;
+    max-width: 550px;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.empty-movie h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #e4d804;
+}
