@@ -6,7 +6,6 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
   for (let i = 1; i <= totalPages; i++) {
     pages.push(i);
   }
-  console.log(pages);
 
   return (
     <div className='pagination'>
