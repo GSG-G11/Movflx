@@ -78,7 +78,7 @@
   opacity: 1;
 }
 
-.movies-grid{
+.row.movies-grid{
   justify-content: space-around;
 }
 
