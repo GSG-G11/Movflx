@@ -1,15 +1,12 @@
 
 ## <div align="center">
-  <a href="https://gsg-clevr.herokuapp.com/">
-    <img src="./public/logo.png" alt="Logo" width="60" height="50">
-  </a>
-  <h3>Movflx</h3>
+  <h1 align="center" style="font-weight: bold"><a href="https://gsg-movflx.netlify.app/" style="color: #FFF; text-decoration: none;">Mov<span style="color:#e4d804">flx</span></a></h1>
 </div>
 
 
 ## Site URL
 
-> [Demo Link]()
+> [Demo Link](https://gsg-movflx.netlify.app/)
 
 ---
 ## Description
