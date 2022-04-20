@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MovieCard from '../Components/MovieCard';
+import SubBanner from '../Components/SubBanner';
 import NoData from '../Components/Search/noData';
 import Subscribe from '../Components/Subscribe';
 
@@ -29,11 +30,7 @@ const SearchPage = () => {
 
   return (
     <>
-      <header className="page-header">
-        <div className="container">
-          Header
-        </div>
-      </header>
+      <SubBanner title={'Search Results'} pathName={'Search'} />
       <section className="results-sec">
         <div className="container">
           <div className='row movies-grid'>
