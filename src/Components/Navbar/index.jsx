@@ -85,11 +85,11 @@ const Navbar = ({setShowSearch}) => {
                 Movies
               </Link>
             </li>
-            {/* <li className='navbar-item'>
-              <Link className='navbar-link' to='/Favourites'>
+            <li className='navbar-item'>
+              <Link className='navbar-link' to='/favourites'>
                 Favourites
               </Link>
-            </li> */}
+            </li>
             <li className='navbar-item'>
               <Link className='navbar-link' to='/#Subscribe'>
                 Subscribe

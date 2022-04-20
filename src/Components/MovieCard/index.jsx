@@ -7,9 +7,15 @@ const MovieCard = ({movie}) => {
   return (
     <div className="single-movie">
       <div className="movie-poster">
-        <Link className='link' to={`/movie/${movie.imdbID}`}>
-          <img src={movie.Poster} alt="movie-poster" />
-        </Link>
+        <img src={movie.Poster} alt="movie-poster" />
+        <ul className="overlay-btns">
+          <li>
+            <button className="btn watch-btn">Watch Later</button>
+          </li>
+          <li>
+            <Link className="btn details-btn" to={`/movie/${movie.imdbID}`}>Details</Link>
+          </li>
+        </ul>
       </div>
       <div className="movie-content">
         <div className="top row">

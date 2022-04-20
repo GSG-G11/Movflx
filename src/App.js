@@ -7,10 +7,12 @@ import NotFound from './Pages/NotFound';
 import SearchPage from './Pages/SearchPage';
 import SingleMovie from './Pages/SingleMovie';
 import Search from './Components/Search';
+import Favourites from './Pages/Favourites';
 
 function App() {
   const [showSearch, setShowSearch] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [watchList, setWatchList] = useState(JSON.parse(localStorage.getItem('watchList')) || []);
 
   return (
     <div className='App'>
@@ -19,9 +21,10 @@ function App() {
         <Search showSearch={showSearch} setShowSearch={setShowSearch} setCurrentPage={setCurrentPage} />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/search/:query' element={<SearchPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
-          <Route path='/movie/:id' element={<SingleMovie />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path='/search/:query' element={<SearchPage setCurrentPage={setCurrentPage} currentPage={currentPage} setWatchList={setWatchList} />} />
+          <Route path='/movie/:id' element={<SingleMovie setWatchList={setWatchList} />} />
+          <Route path='/favourites' element={<Favourites watchList={watchList} setWatchList={setWatchList} />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

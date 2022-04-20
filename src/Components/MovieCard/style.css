@@ -7,6 +7,81 @@
   width: 100%;
   height: 435px;
   margin-bottom: 1rem;
+  position: relative;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.single-movie .movie-poster::before{
+  content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #14141d;
+    border-radius: .5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s linear;
+}
+
+.single-movie:hover .movie-poster::before{
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.movie-poster .overlay-btns{
+  position: absolute;
+  list-style-type: none;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+
+.single-movie:hover .movie-poster .overlay-btns{
+  opacity: 1;
+  visibility: visible;
+}
+
+.movie-poster .overlay-btns li + li {
+  margin-top: 17px;
+}
+
+.movie-poster .overlay-btns li .btn {
+  min-width: 140px;
+  padding: 10px 34px;
+  font-size: .8rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0;
+  border-radius: 2rem;
+  background: #e4d804;
+  color: #151517;
+  transform: translateY(-15px);
+  opacity: 0;
+  transition: all .5s;
+}
+.movie-poster .overlay-btns li:nth-child(2) .btn:hover{
+  background: #e4d804;
+  color: #151517;
+}
+.movie-poster .overlay-btns li:nth-child(2) .btn {
+  background: #12151e none repeat scroll 0 0;
+  border: 2px solid #e4d804;
+  color: #e4d804;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+.single-movie:hover .movie-poster .overlay-btns li .btn {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .movie-poster img {
