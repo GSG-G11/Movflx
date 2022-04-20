@@ -8,47 +8,50 @@ import Subscribe from '../Components/Subscribe';
 const SearchPage = () => {
   const { query } = useParams();
   const [searchResults, setSearchResults] = useState([]);
+  const [totalPages, setTotalPages] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+
   console.log(query);
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
-    fetch(`https://omdbapi.com/?apikey=7b85d604&s=${query}`, {
+    fetch(`https://omdbapi.com/?apikey=7b85d604&s=${query}&page=${currentPage}`, {
       signal: signal
     })
     .then(res => res.json())
     .then(data => {
+      setTotalPages(data.totalResults / 10);
       setSearchResults(data.Search ? data.Search.filter(movie => movie.Poster !== 'N/A').slice(0, 8) : []);
     })
 
     return () => {
       controller.abort();
     }
-  }, [query]);
-
-
-  console.log(searchResults);
+  }, [query, currentPage]);
 
   return (
     <>
       <SubBanner title={'Search Results'} pathName={'Search'} />
-      <section className="results-sec">
-        <div className="container">
+      <section className='results-sec'>
+        <div className='container'>
+          <div className='section-title'>
+            <h5 className="sub-title">ONLINE STREAMING</h5>
+            <h2 className='title'>{query} Results</h2>
+          </div>
           <div className='row movies-grid'>
-            {
-            searchResults.length
-            ?
-            searchResults.map(movie => (
-              <MovieCard movie={movie} key={movie.imdbID} />
-            ))
-            :
-            <NoData />
-            }
+            {searchResults.length ? (
+              searchResults.map((movie) => (
+                <MovieCard movie={movie} key={movie.imdbID} />
+              ))
+            ) : (
+              <NoData />
+            )}
           </div>
         </div>
       </section>
       <Subscribe />
     </>
-  )
+  );
 }
 
 export default SearchPage;
