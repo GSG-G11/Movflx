@@ -20,9 +20,9 @@ function App() {
         <Navbar setShowSearch={setShowSearch}  />
         <Search showSearch={showSearch} setShowSearch={setShowSearch} setCurrentPage={setCurrentPage} />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/search/:query' element={<SearchPage setCurrentPage={setCurrentPage} currentPage={currentPage} setWatchList={setWatchList} />} />
-          <Route path='/movie/:id' element={<SingleMovie setWatchList={setWatchList} />} />
+          <Route path='/' element={<Home setWatchList={setWatchList} watchList={watchList} />} />
+          <Route path='/search/:query' element={<SearchPage setCurrentPage={setCurrentPage} currentPage={currentPage} setWatchList={setWatchList} watchList={watchList} />} />
+          <Route path='/movie/:id' element={<SingleMovie />} />
           <Route path='/favourites' element={<Favourites watchList={watchList} setWatchList={setWatchList} />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

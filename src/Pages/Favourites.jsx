@@ -1,4 +1,5 @@
 import React from 'react'
+import MovieCard from '../Components/MovieCard';
 import SubBanner from '../Components/SubBanner';
 import Subscribe from '../Components/Subscribe';
 
@@ -13,7 +14,15 @@ const Favourites = ({watchList, setWatchList}) => {
             <h2 className='title'>my watch List</h2>
           </div>
           <div className='row movies-grid'>
-            
+          {
+          watchList.length
+          ?
+          watchList.map(movie => (
+            <MovieCard movie={movie} key={movie.imdbID} setWatchList={setWatchList} watchList={watchList} />
+          ))
+          :
+          null
+          }
           </div>
         </div>
       </section>

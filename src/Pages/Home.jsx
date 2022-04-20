@@ -3,7 +3,7 @@ import HomeBanner from '../Components/HomeBanner';
 import Subscribe from '../Components/Subscribe';
 import TopMovies from '../Components/TopMovies';
 
-const Home = () => {
+const Home = ({setWatchList, watchList}) => {
   const [filterCtg, setFilterCtg] = useState('Action');
   const [topMovies, setTopMovies] = useState([]);
 
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
       <HomeBanner />
-      <TopMovies filterCtg={filterCtg} setFilterCtg={setFilterCtg} topMovies={topMovies} />
+      <TopMovies filterCtg={filterCtg} setFilterCtg={setFilterCtg} topMovies={topMovies} setWatchList={setWatchList} watchList={watchList} />
       <Subscribe />
     </>
   )

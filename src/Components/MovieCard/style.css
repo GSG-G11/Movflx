@@ -54,7 +54,7 @@
 }
 
 .movie-poster .overlay-btns li .btn {
-  min-width: 140px;
+  min-width: 200px;
   padding: 10px 34px;
   font-size: .8rem;
   text-transform: capitalize;
@@ -67,6 +67,49 @@
   opacity: 0;
   transition: all .5s;
 }
+.movie-poster .overlay-btns li:first-child .btn{
+  box-shadow: 0 0 0 0 transparent;
+    cursor: pointer;
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1) paused;
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1) paused;
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1) paused;
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1) paused;
+}
+
+.movie-poster .overlay-btns li:first-child .btn {
+  box-shadow: 0 0 0 0 rgb(228, 216, 4);
+  -webkit-animation: pulse 1s infinite ease-in-out;
+    -moz-animation: pulse 1s infinite ease-in-out;
+    -ms-animation: pulse 1s infinite ease-in-out;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(228, 216, 4, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0.4);
+    box-shadow: 0 0 0 0 rgba(228, 216, 4, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(228, 216, 4, 0);
+      box-shadow: 0 0 0 10px rgba(228, 216, 4, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0);
+      box-shadow: 0 0 0 0 rgba(228, 216, 4, 0);
+  }
+}
+
 .movie-poster .overlay-btns li:nth-child(2) .btn:hover{
   background: #e4d804;
   color: #151517;
