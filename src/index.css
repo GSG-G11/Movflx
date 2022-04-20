@@ -69,3 +69,13 @@ button, .btn, a, .link {
   border-radius: 8px;
   margin-top: 2rem;
 }
+
+.results-sec{
+  padding: 6rem 0 4rem;
+  background: url(./images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.results-sec .section-title .title{
+  text-transform: capitalize;
+}
