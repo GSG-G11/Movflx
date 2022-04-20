@@ -10,15 +10,16 @@ import Search from './Components/Search';
 
 function App() {
   const [showSearch, setShowSearch] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   return (
     <div className='App'>
       <BrowserRouter>
-        <Navbar setShowSearch={setShowSearch} />
-        <Search showSearch={showSearch} setShowSearch={setShowSearch} />
+        <Navbar setShowSearch={setShowSearch}  />
+        <Search showSearch={showSearch} setShowSearch={setShowSearch} setCurrentPage={setCurrentPage} />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/search/:query' element={<SearchPage />} />
+          <Route path='/search/:query' element={<SearchPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path='/movie/:id' element={<SingleMovie />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
