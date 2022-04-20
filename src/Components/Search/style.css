@@ -38,6 +38,7 @@
   background-color: transparent;
   color: #FFF;
   letter-spacing: .5px;
+  width: calc(100% - 60px);
   flex: 1;
 }
 
