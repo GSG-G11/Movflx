@@ -50,7 +50,6 @@ const Navbar = ({setShowSearch}) => {
   }, [showSide]);
 
   const handleShowSearch = () => {
-    console.log('clicked')
     setShowSide(false);
     setShowSearch(true);
   }
@@ -86,11 +85,11 @@ const Navbar = ({setShowSearch}) => {
                 Movies
               </Link>
             </li>
-            <li className='navbar-item'>
+            {/* <li className='navbar-item'>
               <Link className='navbar-link' to='/Favourites'>
                 Favourites
               </Link>
-            </li>
+            </li> */}
             <li className='navbar-item'>
               <Link className='navbar-link' to='/#Subscribe'>
                 Subscribe
