@@ -64,3 +64,9 @@
   border-color: transparent;
   padding-right: 0;
 }
+
+@media (max-width: 960px) {
+  .single-movie .movie-poster{
+    height: 500px;
+  }
+}
