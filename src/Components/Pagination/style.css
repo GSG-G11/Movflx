@@ -1,0 +1,34 @@
+/* Pagination Design */
+.pagination ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.pagination ul li .btn {
+  display: block;
+  font-size: .9rem;
+  color: #c2c2c2;
+  font-weight: 600;
+  padding: .5rem 1rem;
+  border: 1.5px solid #c2c2c2;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.pagination ul li .btn:hover,
+.pagination ul li .btn.active {
+  color: #171d22;
+  border-color: #e4d804;
+  background: #e4d804;
+}
+.pagination ul li .btn.disabled {
+  opacity: .4;
+  pointer-events: none;
+}
+
+@media (max-width: 350px) {
+  .pagination ul li .btn {
+    font-size: .8rem;
+    padding: .4rem .8rem;
+  }
+}
