@@ -1,8 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './style.css';
 
-const SubBanner = () => {
+const SubBanner = ({title, pathName}) => {
   return (
-    <div>SubBanner</div>
+    <header className="page-header sub-banner">
+      <div className="container">
+        <div className="banner-content">
+          <h2 className="title">{title}</h2>
+          <ul className="breadcrumb">
+            <li><Link to="/">Home</Link></li>
+            <li><span>{pathName}</span></li>
+          </ul>
+        </div>
+      </div>
+    </header>
   )
 }
 
