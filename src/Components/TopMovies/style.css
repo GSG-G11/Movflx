@@ -79,11 +79,31 @@
 }
 
 .row.movies-grid{
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .movies-grid .single-movie{
   width: 23%;
   min-width: 290px;
   margin: 0 1% 4rem;
+}
+
+
+@media (max-width: 1293px) {
+  .movies-grid .single-movie{
+    width: 31%;
+  }
+}
+
+@media (max-width: 960px) {
+  .movies-grid .single-movie{
+    width: 47%;
+  }
+}
+
+@media (max-width: 640px) {
+  .movies-grid .single-movie{
+    width: 100%;
+    margin: 0 0 4rem;
+  }
 }
