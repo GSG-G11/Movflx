@@ -1,6 +1,6 @@
 
 ## <div align="center">
-  <h1 align="center" style="font-weight: bold"><a href="https://gsg-movflx.netlify.app/" style="color: #FFF; text-decoration: none;">Mov<span style="color:#e4d804">flx</span></a></h1>
+  <h1 align="center"><a href="https://gsg-movflx.netlify.app/"><img src="./src/Components/Navbar/logo.png" /></a></h1>
 </div>
 
 
