@@ -1,1 +1,57 @@
 /* Footer Design */
+
+.footer-quick-link-wrap{
+    background:url('./footer.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    padding: 4rem 7rem;
+    display: flex;
+    justify-content: space-between
+}
+
+.quick-link-list ul,
+.footer-social ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.quick-link-list ul li {
+    margin-right: 50px;
+    margin: 5px 50px 5px 0px;
+}
+.quick-link-list ul li:last-child {
+    margin-right: 0px;
+}
+.quick-link-list ul li a {
+    color: #bcbcbc;
+    display: block;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.footer-social ul {
+    justify-content: flex-end;
+}
+.footer-social ul li {
+    margin-right: 8px;
+}
+.footer-social ul li:last-child {
+    margin-right: 0;
+}
+.footer-social ul li a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgb(18, 21, 30);
+    text-align: center;
+    line-height: 36px;
+    font-size: 12px;
+    color: #bcbcbc;
+}
+.footer-quick-link-wrap {
+    padding-top: 40px;
+}
