@@ -8,7 +8,7 @@ const TopMovies = ({ filterCtg, setFilterCtg, topMovies }) => {
   };
 
   return (
-    <section className='new-sec top-rated-sec' id='Movies'>
+    <section className='new-sec top-rated-sec' id='movies'>
       <div className='container'>
         <div className='section-title'>
           <h5 className='sub-title'>ONLINE STREAMING</h5>
