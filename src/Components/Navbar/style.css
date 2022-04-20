@@ -111,7 +111,26 @@
   color: #FFF;
   letter-spacing: .5px;
   transition: all .5s;
+  position: relative;
   background-color: transparent;
+}
+.navbar-menu .navbar-link.favourites .num{
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+  width: 20px;
+  height: 20px;
+  background: #e4d804;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #171d22;
+  border: 2px solid #171d22;
+  letter-spacing: .5px;
+  transition: all .5s;
 }
 
 .navbar-menu.sidebar .navbar-item{
@@ -128,6 +147,11 @@
 
 .navbar-menu .navbar-link:hover{
   color: #e4d804;
+}
+
+.navbar-menu.sidebar .navbar-link.favourites .num{
+  position: relative;
+  transform: translateY(5px);
 }
 
 .navbar .right-btns .btn{

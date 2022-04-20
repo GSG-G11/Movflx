@@ -2,6 +2,7 @@ import React from 'react'
 import MovieCard from '../Components/MovieCard';
 import SubBanner from '../Components/SubBanner';
 import Subscribe from '../Components/Subscribe';
+import NoData from '../Components/Search/noData';
 
 const Favourites = ({watchList, setWatchList}) => {
   return (
@@ -21,7 +22,7 @@ const Favourites = ({watchList, setWatchList}) => {
             <MovieCard movie={movie} key={movie.imdbID} setWatchList={setWatchList} watchList={watchList} />
           ))
           :
-          null
+          <NoData />
           }
           </div>
         </div>

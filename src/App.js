@@ -17,7 +17,7 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Navbar setShowSearch={setShowSearch}  />
+        <Navbar setShowSearch={setShowSearch} watchList={watchList} />
         <Search showSearch={showSearch} setShowSearch={setShowSearch} setCurrentPage={setCurrentPage} />
         <Routes>
           <Route path='/' element={<Home setWatchList={setWatchList} watchList={watchList} />} />
