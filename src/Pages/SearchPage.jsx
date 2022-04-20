@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MovieCard from '../Components/MovieCard';
 import SubBanner from '../Components/SubBanner';
+import NoData from '../Components/Search/noData';
 import Subscribe from '../Components/Subscribe';
 
 const SearchPage = () => {
@@ -40,7 +41,7 @@ const SearchPage = () => {
               <MovieCard movie={movie} key={movie.imdbID} />
             ))
             :
-            <h2>No results found</h2>
+            <NoData />
             }
           </div>
         </div>
