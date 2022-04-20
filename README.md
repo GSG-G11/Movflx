@@ -1,70 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## <div align="center">
+  <a href="https://gsg-clevr.herokuapp.com/">
+    <img src="./public/logo.png" alt="Logo" width="60" height="50">
+  </a>
+  <h3>Movflx</h3>
+</div>
 
-## Available Scripts
 
-In the project directory, you can run:
+## Site URL
 
-### `npm start`
+> [Demo Link]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+## Description
+Movflx is a website to show movies and detailes about movie, and you can rearch about movie you need to show ... 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## User Story
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Users can view movies.
+* Users can search for a movie.
+* Users can watch a movie's trailer.
+* Users can see the movie poster.
+* Users can see the movie rating.
+* Users can see the movie description.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+## User Journey <span id="user-journey"></span>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- When opening the `Movflx` website you'll be faced with`home` page containing movies.
+- You can search for any movie by click on search in navbar.
+- click the movie image to view movie details.
+- -in movie details you can show the movie when click to the button
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- HTML5
+- CSS3
+- ReactJs
+- ReactJs Hooks
+- React Router dom
+- JSX
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
+## To run the project locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- git clone `https://github.com/GSG-G11/Movflx.git`
+- cd `Movflx`
+- `code .`
+- npm i
+- npm start
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Team Member
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Karam Zomlut](https://github.com/karam-zomlut)
+- [Braa Ferwana](https://github.com/braaAwni)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
