@@ -6,11 +6,10 @@ import NoData from '../Components/Search/noData';
 import Subscribe from '../Components/Subscribe';
 import Pagination from '../Components/Pagination';
 
-const SearchPage = () => {
+const SearchPage = ({currentPage, setCurrentPage}) => {
   const { query } = useParams();
   const [searchResults, setSearchResults] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -23,7 +22,7 @@ const SearchPage = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setTotalPages(Math.round(data.totalResults / 10));
+        setTotalPages(Math.round(+data.totalResults / 10));
         setSearchResults(
           data.Search
             ? data.Search.filter((movie) => movie.Poster !== 'N/A').slice(0, 8)

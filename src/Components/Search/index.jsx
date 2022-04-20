@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
-const Search = ({ showSearch, setShowSearch }) => {
+const Search = ({ showSearch, setShowSearch, setCurrentPage }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const searchPage = useNavigate();
 
@@ -14,6 +14,7 @@ const Search = ({ showSearch, setShowSearch }) => {
     else {
       searchPage(`/search/${searchQuery}`);
       setShowSearch(false);
+      setCurrentPage(1);
       setSearchQuery('');
     }
   };
